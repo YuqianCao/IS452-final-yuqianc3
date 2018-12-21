@@ -18,6 +18,9 @@ def load_file():
 # The above code will load the csv data, remove the na value and add a new line to the csv, finally export a new csv file.
 
 dfs = load_file()
+print('Info: ', dfs.info())
+print('Describe: ', dfs.describe())
+print('Values:', dfs.values[2:])
 
 x = np.array(dfs['hs_grad']).reshape(-1, 1)
 y = np.array(dfs['poverty'])
@@ -45,3 +48,4 @@ plt.ylabel('Amount')
 plt.show()
 
 # The above code will draw the per capita income distribution histogram. Take every 2000 as an interval.
+
